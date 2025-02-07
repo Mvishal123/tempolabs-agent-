@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, Variants } from "motion/react";
 import { Button } from "./button";
 import YCLogo from "./yc-logo";
 import KevinCursor from "./kevin-cursor";
@@ -7,13 +8,27 @@ import ParthCursor from "./parth-cursor";
 import PeterCursor from "./peter-cursor";
 import useCursor from "@/hooks/useCursor";
 import CustomCursor from "./customCursor";
+import MovingCursor from "./moving-cursor";
+
+const gentleMovement: Variants = {
+  animate: {
+    x: [0, 30, -30, 0], // Moves left-right within ±30px
+    y: [0, 30, -30, 0], // Moves up-down within ±30px
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror", // ✅ Corrected Type
+      duration: 5,
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Hero = () => {
   const { cursorPos, hideCursor, setHideCursor } = useCursor();
 
   return (
     <div
-      className="hero max-w-7xl mx-auto relative flex flex-col items-center pt-12 sm:cursor-none"
+      className="hero max-w-7xl mx-auto relative flex flex-col items-center py-12 sm:cursor-none"
       onMouseEnter={() => setHideCursor(false)}
       onMouseLeave={() => setHideCursor(true)}
     >
@@ -43,28 +58,24 @@ const Hero = () => {
 
       <div
         className="my-10 z-10 "
-        onMouseEnter={(e) => {
-          setHideCursor(true);
-        }}
-        onMouseLeave={(e) => {
-          setHideCursor(false);
-        }}
+        onMouseEnter={() => setHideCursor(true)}
+        onMouseLeave={() => setHideCursor(false)}
       >
-        <Button className="cursor-poiner">Get Started</Button>
+        <Button className="cursor-pointer">Get Started</Button>
       </div>
 
       {/* Decor */}
       <div className="h-[300px] w-[600px] rounded-full bg-brand/40 blur-[200px] absolute z-[-99]" />
 
-      {/* Cursors */}
+      {/* Moving Cursors */}
       <div className="hidden sm:block sm:size-40 md:size-48 absolute bottom-24 left-80">
-        <PeterCursor />
+        <MovingCursor Component={PeterCursor} />
       </div>
       <div className="hidden sm:block sm:size-40 md:size-48 absolute top-10 left-48">
-        <KevinCursor />
+        <MovingCursor Component={KevinCursor} />
       </div>
       <div className="hidden sm:block sm:size-40 md:size-48 absolute top-20 right-32">
-        <ParthCursor />
+        <MovingCursor Component={ParthCursor} />
       </div>
 
       {/* Custom Cursor */}

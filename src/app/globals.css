@@ -8,3 +8,7 @@
   width: 100px;
   background-repeat: no-repeat;
 }
+
+.footer-gradient {
+  background: linear-gradient(rgb(31, 31, 34) 0%, rgb(19, 21, 25) 65%);
+}
