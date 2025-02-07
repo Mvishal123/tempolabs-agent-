@@ -7,7 +7,7 @@ const Page = () => {
     <div>
       <Hero />
       <Team />
-      <div className="h-[400vh]"></div>
+      <div className="h-[100vh]"></div>
     </div>
   );
 };

@@ -5,10 +5,8 @@ import Shopify from "./shopify";
 
 const Team = () => {
   return (
-    <div className="">
-      <div className="relative">
-        <MovingLines className="absolute" />
-      </div>
+    <div className="relative overflow-visible">
+      <MovingLines className="absolute top-0 left-0 w-full" />
       <div className="pt-6 flex flex-col items-center">
         <p className="text-xl font-light text-white/60 text-center ">
           We're a team of <span className="text-white">Industry experts,</span>{" "}
