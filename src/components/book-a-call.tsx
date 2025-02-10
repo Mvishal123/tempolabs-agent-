@@ -12,7 +12,7 @@ const BookCall = () => {
         />
       </div>
       <div className="relative z-10 max-w-lg mx-auto">
-        <h1 className="text-6xl text-center leading-tight mt-12">
+        <h1 className="text-6xl text-center leading-tighter mt-12">
           See if Tempo Agent<span className="text-brand">+</span> is for you
         </h1>
         <p className="text-neutral-500 text-center mt-4">
