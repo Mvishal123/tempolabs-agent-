@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="w-fit border-b-[0.5px] border-white/15 pb-6">
             <span className="text-xs text-white/60">TEMPO LABS | YC 23</span>
             <p className="text-3xl mt-4">
-              Build UI's 10x faster{" "}
+              Build UI&apos;s 10x faster{" "}
               <span className="bg-gradient-to-r from-purple-500 to-violet-400 bg-clip-text text-transparent">
                 with AI
               </span>

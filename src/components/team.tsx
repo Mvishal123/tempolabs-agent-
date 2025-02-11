@@ -9,7 +9,7 @@ const Team = () => {
       <MovingLines className="absolute top-0 left-0 w-full" />
       <div className="pt-6 flex flex-col items-center">
         <p className="text-xl font-light text-white/60 text-center ">
-          We're a team of <span className="text-white">Industry experts,</span>{" "}
+          We&apos;re a team of <span className="text-white">Industry experts,</span>{" "}
           from
         </p>
         <div className="flex mt-12 items-start">

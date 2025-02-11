@@ -1,27 +1,13 @@
 "use client";
 
-import { motion, Variants } from "motion/react";
+import useCursor from "@/hooks/useCursor";
 import { Button } from "./button";
-import YCLogo from "./yc-logo";
+import CustomCursor from "./customCursor";
 import KevinCursor from "./kevin-cursor";
+import MovingCursor from "./moving-cursor";
 import ParthCursor from "./parth-cursor";
 import PeterCursor from "./peter-cursor";
-import useCursor from "@/hooks/useCursor";
-import CustomCursor from "./customCursor";
-import MovingCursor from "./moving-cursor";
-
-const gentleMovement: Variants = {
-  animate: {
-    x: [0, 30, -30, 0], // Moves left-right within ±30px
-    y: [0, 30, -30, 0], // Moves up-down within ±30px
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror", // ✅ Corrected Type
-      duration: 5,
-      ease: "easeInOut",
-    },
-  },
-};
+import YCLogo from "./yc-logo";
 
 const Hero = () => {
   const { cursorPos, hideCursor, setHideCursor } = useCursor();
